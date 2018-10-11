@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Add A Product</title>
+	<link rel="stylesheet" type ="text/css" href="./css/style.css">
+	<script type="text/javascript" src="./js/index.js"></script>
+</head>
+<body>
+	<header>
+		<h1> Add A New Product</h1>
+	</header>
+
+	<form class="form-container">
+		<label>Product Name: </label>
+		<input type="text" required="required"><br>
+
+		<label>Product Category: </label>
+		<select>
+			<option value="null"> Select </option>
+			<option value="Male"> Male Clothings</option>
+  			<option value="saab"> Female Clothings</option>
+  			<option value="kids"> Kids Clothings</option>
+		</select><br>
+
+		<label>Product Picture: </label>
+		<input class="picturefield" type="file" required="required"><br>
+
+		<label>Available Sizes: </label><br>
+			<ul>
+				<li><label>Small(S)</label><br><input type="checkbox"></li>
+				<li><label>Medium(M)</label><br><input type="checkbox"></li>
+				<li><label>Large(L)</label><br><input type="checkbox"></li>
+			</ul>
+		<br>
+		<label>Price: </label>
+		<input class="pricefield" type="number" required="required"><br>
+
+		<label>Quantity: </label>
+		<input type="number" required="required"><br>
+
+		<label>Upload Date: </label>
+		<input class="datefield" type="date" required="required"><br>
+
+		<label>Minimum Invetory Quantity Allowed: </label>
+		<input type="number" required="required"><br>
+
+		<button class="submit-btn" type="submit">Add to Inventory</button>
+		<button class="close-btn" type="close">close</button>
+	</form>
+
+</body>
+</html>
