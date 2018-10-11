@@ -1,0 +1,101 @@
+body{
+	background-image:url(background.jpg);
+	background-size:100% auto;
+	background-repeat:no-repeat;
+}
+
+header{
+	border:1px solid #056bbf;
+}
+
+#main_container {
+    height: 500px;
+    width: 400px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5%;
+    margin-left: 10%;
+    background-color: rgb(0,0,0,0.5);
+}
+.button_LS{
+	width:100px;
+	height:50px;
+	margin-top: 3%;
+}
+
+button#login_button {
+    margin-left: 21%;
+	margin-right: 3%;
+}
+
+button#signup_button {
+    margin-left: 2%;
+}
+
+span#login_msg {
+    margin-left: 22%;
+}
+span#signup_msg {
+    margin-left: 9%;
+}
+#login_container {
+    border: none;
+    margin-top: 10px;
+    height: 150px;
+}
+
+.container {
+        margin: 0 auto;
+       margin-left: 10%;
+       margin-top: 30%;     
+}
+.login:focus {
+    border: 2px solid #d63030;
+
+}
+
+#password{
+    width: 250px;
+    height: 30px;
+	padding-left: 40px;
+}
+#username{
+	width: 250px;
+    height: 30px;
+	padding-left: 40px;
+}
+
+.icon {
+    padding: 10px;
+    background: #d63030;
+    color: white;
+    width: 15px;
+    text-align: center;
+    position: absolute;
+    height: 16px;
+}
+
+#img-container{
+	border:1px solid;
+}
+
+#image {
+    width: 90px;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+
+.loginbtn, .cancelbtn {
+    margin:20px;
+}
+.cancelbtn{
+    display: none;
+}
+.loginbtn{
+    margin-left: 0px;
+    height: 34px;
+}
+
+#login_msg, #signup_msg, #fgtpwd{
+    color: silver;
+}
