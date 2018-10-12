@@ -1,0 +1,51 @@
+body{
+	background-image: url("../img/background.jpg");
+}
+h1{
+	margin: 0 auto;
+	text-align: center;
+	color: silver;
+}
+form{
+	height: 70%;
+	width: 50%;
+	background-color: rgba(0,0,0,0.5);
+	padding: 50px;
+	margin: 0 auto;
+	box-shadow: 1px 1px 18px 1px grey;
+	border-radius: 10px;
+}
+input{
+	padding: 10px;
+	margin: 20px;
+	border: none;
+	border-bottom: 1px solid grey;
+	border-radius: 5px;
+
+}
+
+textarea{
+	width: 50%;
+	height: 100px;
+	margin: 20px;
+	border: none;
+	border-bottom: 1px solid grey;
+	border-radius: 5px;
+}
+
+.submit-btn{
+	float: right;
+	padding: 7px;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	margin-right: 30px;
+}
+.cancel-btn{
+	float: left;
+	padding: 7px;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	margin-left: 30px;
+}
