@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
     "start": "npm run build && node dist/index.js"
   },
@@ -26,5 +26,7 @@
     "rimraf": "^2.6.2",
     "istanbul": "~0.2.4",
     "coveralls": "~2.7.1"
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
   }
 }
