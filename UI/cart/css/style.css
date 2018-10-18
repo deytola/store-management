@@ -1,0 +1,112 @@
+.item-heading,.qty-heading,.price-heading,.subtotal-heading{
+	position: absolute;
+	top: 20%;
+	font-weight: bolder;
+	font-size: 25px;
+}
+
+.item-heading{
+	left: 24%;
+}
+
+.qty-heading{
+	left: 36%;
+}
+
+
+.price-heading{
+	left: 51%;
+}
+
+
+.subtotal-heading{
+	left: 67%;
+}
+
+.thumbnail{
+	background-color: grey;
+	height:70px;
+	width: 70px;
+	margin-left: 20px;
+}
+
+.item-detail,.qty-detail, .price-detail, .subtotal-detail{
+	height:150px;
+	width: 200px;
+	text-align: center;
+	top: 30%;
+	padding: 2px;
+	padding-top: 10px;
+	font-weight: bold;
+	font-size: 20px;
+	background-color: rgba(0,0,0,0.5);
+
+}
+.item-detail{
+	position: absolute;
+	
+	left: 18%;
+}
+.qty-detail{
+	position: absolute;
+	left: 33%;
+}
+.price-detail{
+	position: absolute;
+	left: 48%;
+}
+.subtotal-detail{
+	position: absolute;
+	left: 63%;
+}
+.detail-container{
+	margin-top: 10%;
+	margin-left: 40%;
+}
+
+.total{
+	position: absolute;
+	top: 80%;
+	right: 15%;
+	font-weight: bolder;
+	font-size: 25px;
+	color: white;
+	background-color: rgba(0,0,0,0.5);
+}
+label{
+	position: absolute;
+	top: 80%;
+	right: 22%;
+	font-weight: bolder;
+	font-size: 25px;
+	color: white;
+	background-color: rgba(0,0,0,0.5);
+}
+
+header{
+	text-align: center;
+	background-color: silver;
+	padding: 10px;
+	box-shadow: 1px 1px 18px 1px grey;
+	background-image: url("../img/headerbackground.jpg");
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	border-radius: 5px;
+}
+h1,h5,span{
+	color: white;
+}
+body{
+	background-image: url("../img/background.jpg");
+	background-size: 100%;
+}
+
+.checkout-btn{
+	padding: 5px;
+	font-size: 15px;
+	font-weight: bold;
+	position: absolute;
+	top: 80%;
+	left:18%;
+}
