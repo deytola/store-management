@@ -26,6 +26,7 @@ table#details tr:nth-child(odd) {
 table#details th {
     background-color: black;
     color: white;
+    margin-top: 5%;
 }
 header {
     height: 50px;
@@ -43,4 +44,43 @@ body{
 	background-image:url("../img/background.jpg");
 	background-size:100%;
 	background-repeat:no-repeat;
+}
+
+#searchfield{
+	position: absolute;
+	left: 30%;
+	height: 30px;
+	width:500px;
+	padding: 10px;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 1px 1px 18px 1px grey;
+	font-size: 16px;
+	top: 3%;
+
+}
+#searchbtn{
+	position: absolute;
+	left: 69%;
+	padding: 7px;
+	border: none;
+	border-radius: 10px;
+	color: grey;
+	font-size: 16px;
+	top: 3%;
+	
+}
+#searchbtn:hover{
+	box-shadow: 1px 1px 18px 1px grey;
+}
+.total{
+	position: absolute;
+	left: 80%;
+	padding: 7px;
+	border: none;
+	border-radius: 2px;
+	color: white;
+	font-size: 16px;
+	bottom: 3%;
+	background-color: rgba(0,0,0,0.8);
 }
