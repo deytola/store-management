@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>View Product</title>
+	<script type="text/javascript" src="./js/individualProduct.js"></script>
+</head>
+<body>
+	<header>
+		<i class="menu-icon fa fa-bars" onclick="openNav()"></i>
+		<h1>Product 001</h1>
+	</header>
+
+	<div id="menu-list" class="sidenav">
+		<a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="../products/allProducts/allProducts.html">View Products</a>
+		<a href="../sales/allSales/allAttendantSales.html">View Attendants' Records</a>
+		<a href="../sales/newuser/newuser.html">Create New User</a>
+		<a href="../login/login.html">Log Out</a>
+	</div>
+
+	<div id='main_container'>
+		<div id='container1'>
+			<div id='child_1' class ='child'>
+			</div>
+			<div id='child_2' class ='child'>
+			</div>
+		</div>
+		<div id ='main_box'></div>
+		<div id ='details_box'>
+			<h1>PRODUCT NAME</h1>
+			<p>Product Description</p>
+			<hr>
+			<h3>Size</h3>
+			<form>
+				<span class='s' id='s1'>S</span><span class='s' id='s2'>M</span><span class='s' id='s3'>L</span><br>
+				<input  class ='check' id='check1' type="checkbox" name="size1" value="small">
+				<input class ='check' id='check2' type="checkbox" name="size2" value="medium">
+				<input class ='check' id='check3' type="checkbox" name="size3" value="large" checked><br><br>
+	  			<div id='price_container'>#50,000</div>
+	  			<button id='P_O'>Place Order</button>
+			</form>
+		</div>
+	</div>
+	
+</body>
+</html>

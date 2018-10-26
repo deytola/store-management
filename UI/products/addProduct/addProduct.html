@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Add A Product</title>
+	<script src="./js/addProduct.js"></script>
+	<link rel="stylesheet" type ="text/css" href="./css/style.css">
+	<script type="text/javascript" src="./js/index.js"></script>
+</head>
+<body>
+	<header>
+		<h1> Add A New Product</h1>
+		<i class="menu-icon fa fa-bars" onclick="openNav()"></i>
+	</header>
+
+	<div id="menu-list" class="sidenav">
+		<a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="../products/allProducts/allProducts.html">View Products</a>
+		<a href="../sales/allSales/allAttendantSales.html">View Attendants' Records</a>
+		<a href="../sales/newuser/newuser.html">Create New User</a>
+		<a href="../login/login.html">Log Out</a>
+	</div>
+
+	<form class="form-container">
+		<input type="text" required="required" placeholder=" Product name"><br>
+		<select>
+			<option value="null"> Product Category </option>
+			<option value="shirts"> Shirts</option>
+  			<option value="t-shirts"> T-Shirts </option>
+  			<option value="shoes"> Shoes </option>
+		</select><br>
+
+		<label>upload product picture</label>
+		<input class="picturefield" type="file" required="required" placeholder="upload product"><br>
+
+		<select>
+			<option value="null"> Available sizes </option>
+			<option value="null"> small </option>
+			<option value="small"> medium </option>
+			<option value="medium"> large </option>
+			<option value="uk1"> 43 </option>
+			<option value="uk2"> 44 </option>
+			<option value="uk3"> 45 </option>
+
+		</select><br>
+		
+		<input class="pricefield" type="number" required="required" placeholder=" Price "><br>
+
+		<input type="number" required="required" placeholder=" Quantity "><br>
+
+		<label>date of upload: </label>
+		<input class="datefield" type="date" required="required" placeholder=" Date of upload "><br>
+		<input type="number" required="required" placeholder="Minimum invetory quantity allowed"><br>
+
+		<button class="submit-btn" type="submit">Add to Inventory</button>
+		<button class="close-btn" onclick='window.location.href="../allProducts/allProducts.html"'>cancel</button>
+	</form>
+
+</body>
+</html>

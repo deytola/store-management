@@ -1,0 +1,113 @@
+body{
+	background-image: url(../img/addProductBackground.jpg);
+}
+.menu-icon{
+	position: absolute;
+	left: 1%;
+	font-size: 40px;
+	cursor: pointer;
+	margin-right: 5%;
+	
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 60px;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+	padding-top: 60px;
+	background-color: rgba(0,0,0,0.8);
+	border: none;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+a{
+	font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: 400;
+    font-stretch: normal;
+    font-size: 34px;
+    line-height: 40px;
+    font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.form-container{
+	position: absolute;
+	left: 23%;
+	top: 12%;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 1px 1px 18px 1px grey;
+	background-color: rgba(0,0,0,0.8);
+	height: auto;
+	width: 50%;
+	margin-bottom: 10px;
+}
+header{
+	text-align: center;
+	color: #ffffff;
+}
+
+ul{
+	color: #ffffff;
+	list-style: none;
+}
+
+label{
+	font-size: 20px;
+	color:white;
+}
+input, select, label{
+	padding: 10px;
+	margin: 10px;
+	margin-left: 35%;
+	border:none;
+	border-radius: 5px;
+}
+input{
+	width: 32%;
+}
+.datefield, .pricefield{
+	color: black;
+}
+.picturefield{
+	color: #ffffff;
+}
+.submit-btn{
+	padding: 4px;
+	float: right;
+	font-weight: bold;
+	border-radius: 3px;
+}
+.close-btn{
+	padding: 4px;
+	float: left;
+	font-weight: bold;
+	border-radius: 3px;
+}
