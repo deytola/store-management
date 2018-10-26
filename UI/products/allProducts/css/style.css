@@ -145,6 +145,7 @@ h4{
 
 .addproduct{
 	position: absolute;
+	top: 12%;
     left: 78%;
     font-size: 50px;
     color: grey;
@@ -206,4 +207,14 @@ a{
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+}
+.back-btn{
+	position: absolute;
+	top: 11.9%;
+    left: 89%;
+    font-size: 50px;
+    color: grey;
+}
+.back-btn:hover{
+	color: black;
 }
