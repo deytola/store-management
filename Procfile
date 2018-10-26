@@ -1,1 +1,1 @@
-web: nodemon --exec babel-node --presets env app.js
+web: nodemon --exec babel-node --presets env index.js

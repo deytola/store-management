@@ -4,3 +4,4 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/2654b18f8ca270cb250b/maintainability)](https://codeclimate.com/github/deytola/store-manager/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/2654b18f8ca270cb250b/test_coverage)](https://codeclimate.com/github/deytola/store-manager/test_coverage)
 
+

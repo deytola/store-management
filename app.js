@@ -10,8 +10,12 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-//import routes into the application
+// import routes into the application
 app.use('/', routes);
+
+// app.get('/', (req,res) => {
+//   res.json("Store Manager");
+// });
 
 
 app.listen(port, () => {
