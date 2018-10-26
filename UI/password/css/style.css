@@ -1,0 +1,60 @@
+body{
+	background-image: url(../img/passwordBackground.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+}
+
+.form-container{
+	position: absolute;
+	left: 23%;
+	top: 12%;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 1px 1px 18px 1px grey;
+	background-color: rgba(0,0,0,0.8);
+	height: auto;
+	width: 50%;
+	margin-bottom: 10px;
+}
+header{
+	text-align: center;
+	color: #ffffff;
+}
+
+ul{
+	color: #ffffff;
+	list-style: none;
+}
+
+label{
+	font-size: 20px;
+	color:white;
+}
+input{
+	padding: 10px;
+	margin: 10px;
+	margin-left: 35%;
+	border:none;
+	border-radius: 5px;
+}
+input{
+	width: 32%;
+}
+.datefield, .pricefield{
+	color: black;
+}
+.picturefield{
+	color: #ffffff;
+}
+.submit-btn{
+	padding: 4px;
+	float: right;
+	font-weight: bold;
+	border-radius: 3px;
+}
+.close-btn{
+	padding: 4px;
+	float: left;
+	font-weight: bold;
+	border-radius: 3px;
+}
