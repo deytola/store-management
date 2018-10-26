@@ -3,16 +3,25 @@
 <head>
 	<link rel="stylesheet" type ="text/css" href="./css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src = "index.js"></script>
+	<script src = "./js/allSales.js"></script>
 </head>
 <body>
 	<header>
+		<i class="menu-icon fa fa-bars" onclick="openNav()"></i>
 		<div id="searchbar">
 			<input id="searchfield" type="search" placeholder="Search for attendants"/>
 			<button id="searchbtn">Search</button>
 		</div>
 		<button id='cancel'><span class='fa fa-times-circle'></span> Close</button>
 	</header>
+
+	<div id="menu-list" class="sidenav">
+		<a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="../products/allProducts/allProducts.html">View Products</a>
+		<a href="../sales/allSales/allAttendantSales.html">View Attendants' Records</a>
+		<a href="../sales/newuser/newuser.html">Create New User</a>
+		<a href="../login/login.html">Log Out</a>
+	</div>
 
 	<table id='details'>
 
