@@ -54,9 +54,7 @@ const sales = [
 
 
 // Route to get all sale records
-const list = (req, res) => {
-  return res.json(sales);
-};
+const list = (req, res) => res.json(sales);
 
 // Route to get a specific sale record
 const retrieve = (req, res) => {
@@ -69,14 +67,13 @@ const retrieve = (req, res) => {
 
   if (currentRecord.length === 1) {
     return res.json(currentRecord[0]);
-  } else {
-    res.status(404); // Set status to 404 as movie was not found
-    return res.json({ message: 'Record Not Found' });
   }
+  res.status(404); // Set status to 404 as movie was not found
+  return res.json({ message: 'Record Not Found' });
 };
 
 // Route to create to create a sale order
-const create =  (req, res) => {
+const create = (req, res) => {
   // Check if all fields are provided and are valid:
   if (!req.body.user
        || !req.body.attendantName
@@ -87,22 +84,21 @@ const create =  (req, res) => {
        || !req.body.item[0].quantity
        || !req.body.item[0].unitPrice || req.body.item[0].unitPrice <= 0
        || !req.body.item[0].subtotal
-       ) {
+  ) {
     res.status(400);
     return res.json({ message: 'Bad Request' });
-  } else {
-    const newId = Math.floor(Math.random()*9000000) + 1000000;
-    products.push({
-      id: newId,
-      user: req.body.user,
-      attendantName: req.body.attendantName,
-      customerName: req.body.customerName,
-      item:req.body.item,
-      total: req.body.total,
-      dateSold: req.body.dateSold
-    });
-    return res.json({ message: 'New sale record created.', location: `/v1/sales/${newId}` });
   }
+  const newId = Math.floor(Math.random() * 9000000) + 1000000;
+  sales.push({
+    id: newId,
+    user: req.body.user,
+    attendantName: req.body.attendantName,
+    customerName: req.body.customerName,
+    item: req.body.item,
+    total: req.body.total,
+    dateSold: req.body.dateSold,
+  });
+  return res.json({ message: 'New sale record created.', location: `/v1/sales/${newId}` });
 };
 
 // Route to delete a sale record
@@ -112,10 +108,11 @@ const destroy = (req, res) => {
   ).indexOf(req.params.id); // Get the index of the sale record with given id.
   if (removeIndex === -1) {
     return res.json({ message: 'Record Not Found' });
-  } else {
-    sales.splice(removeIndex, 1);
-    return res.send({ message: `Record id ${req.params.id} removed.` });
   }
+  sales.splice(removeIndex, 1);
+  return res.send({ message: `Record id ${req.params.id} removed.` });
 };
 
-export {list, retrieve, create, destroy};
+export {
+  list, retrieve, create, destroy,
+};
