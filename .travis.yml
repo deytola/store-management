@@ -3,18 +3,30 @@ node_js:
   - "node"
 install: 
   - npm install
-directories:
-  - "node_modules"
+cache:
+  bundler: true
+  directories:
+    - node_modules
+addons:
+  chrome: stable
+  #firefox: latest
 services:
  - postgresql
 env:
  global:
  - CC_TEST_REPORTER_ID=43ff4ab978a03ad6144fe8b0ba8afe5809ee82cd1d807dce0c96e68a0824bc7f
+
+before_install:
+  - nvm install                         # Install node version from .nvmrc
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  #- export DISPLAY=:99.0                # Display number for xvfb (for headless browser testing)
+  #- sh -e /etc/init.d/xvfb start        # Start xvfb (for headless browser testing)
+ 
 before_script:
- - npm install
- - npm install coveralls --save-dev
- - npm install mocha-lcov-reporter --save-dev
- - npm install supertest
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 script: 
  - npm test
  - nyc --reporter=lcov yarn run test
@@ -23,3 +35,5 @@ after_success:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 after_script: 
   - "cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"
+  - ./cc-test-reporter format-coverage -t lcov -o coverage/codeclimate.frontend.json coverage/frontend/lcov.info  # Format frontend coverage
+  - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./cc-test-reporter upload-coverage; fi  # Upload coverage/codeclimate.json
