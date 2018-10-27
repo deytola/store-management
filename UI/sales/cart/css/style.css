@@ -1,0 +1,137 @@
+.item-heading{
+	position: absolute;
+	top: 10%;
+	font-weight: bolder;
+	font-size: 25px;
+}
+.qty-heading,.price-heading,.subtotal-heading{
+	position: absolute;
+	top: 25%;
+	font-weight: bolder;
+	font-size: 25px;
+}
+.item-heading{
+	left: 24%;
+}
+
+.qty-heading{
+	left: 38%;
+}
+
+
+.price-heading{
+	left: 45.5%;
+}
+
+
+.subtotal-heading{
+	left: 54%;
+}
+
+.thumbnail{
+	background-color: grey;
+	height:70px;
+	width: 100px;
+	margin-left: 50px;
+}
+
+.item-detail{
+	height:150px;
+	width: 200px;
+	text-align: center;
+	top: 20%;
+	padding: 2px;
+	padding-top: 10px;
+	font-weight: bold;
+	font-size: 20px;
+	background-color: rgba(0,0,0,0.5);
+
+}
+.qty-detail, .price-detail, .subtotal-detail{
+	height:50px;
+	width: 100px;
+	text-align: center;
+	top: 35.5%;
+	padding: 2px;
+	padding-bottom: 7px;
+	font-weight: bold;
+	font-size: 20px;
+	background-color: rgba(0,0,0,0.5);
+}
+.item-detail{
+	position: absolute;
+	
+	left: 18%;
+}
+.qty-detail{
+	position: absolute;
+	left: 37%;
+}
+.price-detail{
+	position: absolute;
+	left: 45%;
+}
+.subtotal-detail{
+	position: absolute;
+	left: 53%;
+}
+.detail-container{
+	margin-top: 10%;
+	margin-left: 40%;
+}
+
+.total{
+	position: absolute;
+	top: 80%;
+	right: 15%;
+	font-weight: bolder;
+	font-size: 25px;
+	color: white;
+	background-color: rgba(0,0,0,0.5);
+}
+label{
+	position: absolute;
+	top: 80%;
+	right: 22%;
+	font-weight: bolder;
+	font-size: 25px;
+	color: white;
+	background-color: rgba(0,0,0,0.5);
+}
+
+header{
+	text-align: center;
+	background-color: silver;
+	padding: 10px;
+	box-shadow: 1px 1px 18px 1px grey;
+	background-image: url("../img/cartHeaderBackground.jpg");
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	border-radius: 5px;
+}
+h1,h5,span{
+	color: white;
+	font-size: 20px;
+	
+}
+body{
+	background-image: url("../img/cartBackground.jpg");
+	background-size: 100%;
+}
+
+.checkout-btn{
+	padding: 5px;
+	font-size: 15px;
+	font-weight: bold;
+	position: absolute;
+	top: 80%;
+	left:18%;
+}
+.pagination{
+	position: absolute;
+	color: white;
+	top: 90%;
+	left: 45%;
+	font-weight: bolder;
+}

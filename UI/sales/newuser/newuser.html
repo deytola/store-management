@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Add A Product</title>
+	<link rel="stylesheet" type ="text/css" href="./css/styles.css">
+	<script type="text/javascript" src="./js/index.js"></script>
+</head>
+<body>
+	<header>
+		<h1> Create A New User</h1>
+	</header>
+
+	<form class="form-container">
+        <input type="text" required="required" placeholder=" First name"><br>
+        <input type="text" required="required" placeholder=" Last name"><br>
+        <input type="text"  placeholder=" Middle name"><br>
+        <input type="text" required="required" placeholder=" Email address"><br>
+        <input type="text" required="required" placeholder=" Contact address"><br>
+		<select>
+			<option value="null"> Gender </option>
+			<option value="male"> Male </option>
+  			<option value="female"> Female </option>
+		</select><br>
+
+		<label>upload picture</label>
+		<input class="picturefield" type="file" required="required"><br>
+
+		<select>
+			<option value="null"> Role </option>
+			<option value="attendant"> Attendant </option>
+			<option value="admin"> Admin </option>
+
+		</select><br>
+		
+		<input class="pricefield" type="number" required="required" placeholder=" Phone number "><br>
+
+		<button class="submit-btn" type="submit" >create user</button>
+		<button class="close-btn" onclick='window.location.href="../../dashboard/adminDashboard.html"'>cancel</button>
+	</form>
+
+</body>
+</html>
