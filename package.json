@@ -2,7 +2,7 @@
   "name": "testapi",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "set NODE_ENV=test&& nyc --reporter=html --reporter=text mocha --timeout 500000 --exit --compilers js:babel-core/register test",
     "coverage": "nyc --reporter=lcov --reporter=text-lcov npm test",
