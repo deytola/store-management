@@ -3,10 +3,23 @@ node_js:
   - "node"
 install: 
   - npm install
+directories:
+  - "node_modules"
+services:
+ - postgresql
+env:
+ global:
+ - CC_TEST_REPORTER_ID=43ff4ab978a03ad6144fe8b0ba8afe5809ee82cd1d807dce0c96e68a0824bc7f
+before_script:
+ - npm install
+ - npm install coveralls --save-dev
+ - npm install mocha-lcov-reporter --save-dev
+ - npm install supertest
 script: 
-  - npm test
-  - npm run cover
+ - npm test
+ - nyc --reporter=lcov yarn run test
 after_success: 
-  - npm run coveralls
+  - npm run coverage
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 after_script: 
   - "cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"
