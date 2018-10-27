@@ -8,6 +8,8 @@ cache:
   directories:
     - node_modules
 addons:
+  code_climate:
+    repo_token: 43ff4ab978a03ad6144fe8b0ba8afe5809ee82cd1d807dce0c96e68a0824bc7f
   chrome: stable
   #firefox: latest
 services:
@@ -27,9 +29,11 @@ before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
+  - npm install codeclimate-test-reporter istanbul -g
 script: 
  - npm test
  - nyc --reporter=lcov yarn run test
+ - istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec --compilers js:babel-register && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
 after_success: 
   - npm run coverage
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
@@ -37,3 +41,4 @@ after_script:
   - "cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"
   - ./cc-test-reporter format-coverage -t lcov -o coverage/codeclimate.frontend.json coverage/frontend/lcov.info  # Format frontend coverage
   - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./cc-test-reporter upload-coverage; fi  # Upload coverage/codeclimate.json
+  - codeclimate-test-reporter < ./coverage/lcov.info
