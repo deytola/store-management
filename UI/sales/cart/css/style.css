@@ -12,6 +12,7 @@
 }
 .item-heading{
 	left: 24%;
+	top: 20%;
 }
 
 .qty-heading{
@@ -39,7 +40,7 @@
 	height:150px;
 	width: 200px;
 	text-align: center;
-	top: 20%;
+	top: 30%;
 	padding: 2px;
 	padding-top: 10px;
 	font-weight: bold;
@@ -51,7 +52,7 @@
 	height:50px;
 	width: 100px;
 	text-align: center;
-	top: 35.5%;
+	top: 45.5%;
 	padding: 2px;
 	padding-bottom: 7px;
 	font-weight: bold;
@@ -110,10 +111,15 @@ header{
 	background-size: 100%;
 	border-radius: 5px;
 }
-h1,h5,span{
+h5,span{
 	color: white;
 	font-size: 20px;
 	
+}
+
+h1{
+	color: white;
+	font-size: 40px;
 }
 body{
 	background-image: url("../img/cartBackground.jpg");
@@ -130,8 +136,9 @@ body{
 }
 .pagination{
 	position: absolute;
-	color: white;
+	color: black;
 	top: 90%;
 	left: 45%;
 	font-weight: bolder;
+	font-size: 20px;
 }
